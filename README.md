@@ -5,7 +5,7 @@
 This repo contains content about a course about Laravel 9, I'm following hardly the ourse
 to check curiositys and all things about Laravel 9
 
-# How to us this repo:
+# How to use this repo:
 
 This repo will be divided in chapters and inside of each chapter has the chapter's content 
 
