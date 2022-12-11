@@ -2,8 +2,8 @@
 
 # Studies about Laravel 9 Framework
 
-This repo contains content about a course about Laravel 9, I'm following hardly the ourse
-to check curiositys and all things about Laravel 9
+This repo contains content about a course about Laravel 9, I'm following hardly the course
+to check curiosities and all things about Laravel 9
 
 # How to use this repo:
 
