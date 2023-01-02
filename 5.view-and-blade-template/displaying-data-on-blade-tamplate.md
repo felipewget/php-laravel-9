@@ -22,3 +22,9 @@ php artisan view:cache
 
 # Remove cache view files
 php artisan view:clear
+
+I can user compact to pass params to view...
+
+use compact('hi') insted
+$hi = [];
+['hi' => $hi]
