@@ -60,5 +60,5 @@ DB::table('users')->where('id', 1)->decrement('priority');
 
 // Delete
 DB::table('users')->where('id', 1)->delete();
-DB::table('users')->delete();
+DB::table('users')->delete(); // remove all records
 DB::table('users')->truncate();
