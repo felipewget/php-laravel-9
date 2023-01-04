@@ -35,3 +35,6 @@ Contact::factory(15)->create()
 Contact::factory(15)->create([
     "first_name" => "I choosed this string"
 ])
+
+Factorie relationship
+https://laravel.com/docs/9.x/eloquent-factories#has-many-relationships
