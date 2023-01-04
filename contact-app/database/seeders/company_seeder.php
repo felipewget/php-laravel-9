@@ -15,6 +15,7 @@ class company_seeder extends Seeder
      */
     public function run()
     {
+        
         $companies = [];
 
         $faker = Faker::create();
