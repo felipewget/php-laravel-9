@@ -16,7 +16,8 @@ class AddUserIdToTasks extends Migration
         Schema::table('tasks', function (Blueprint $table) {
             // $table->unsignedBigInteger('user_id')->after('id')->nullable();
             // $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('set null');
-            $table->foreignId('user_id')->constrained('users')->onUpdate('cascade')->onDelete('set null');
+            // ->onUpdate('cascade')->onDelete('set null')
+            $table->foreignId('user_id')->constrained('users');
         });
     }
 

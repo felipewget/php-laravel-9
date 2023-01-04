@@ -419,9 +419,13 @@
     </div>
 
 
-    @foreach ($contacts as $id => $contact)
-        <p>{{$contact['name']}} - {{ $contact['phone'] }} | <a href='{{route('contacts.show', $id)}}'>Show</a></p>
+    @foreach ($contacts as $contact)
+        <p>{{$contact['first_name']}} - {{ $contact['phone'] }} | <a href='{{route('contacts.show', $contact['id'])}}'>Show</a></p>
     @endforeach
+
+    <hr />
+    Companies:
+    {{"companies" . json_encode($companies)}}
 </body>
 
 </html>

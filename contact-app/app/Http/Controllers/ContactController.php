@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\CompanyRepository;
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -14,13 +15,8 @@ class ContactController extends Controller
 
     public function index(CompanyRepository $company, Request $request)
     {
-
         $companies = $company->pluck();
-        $contacts = [
-            ['name' => 'name 1', 'phone' => 'phone 1'],
-            ['name' => 'name 2', 'phone' => 'phone 2'],
-            ['name' => 'name 3', 'phone' => 'phone 3'],
-        ];
+        $contacts = Contact::latest()->get();
 
         return view('contacts.index', ['contacts' => $contacts, 'companies' => $companies]);
     }
@@ -32,6 +28,8 @@ class ContactController extends Controller
 
     public function show($id)
     {
-        return view('contacts.show', ['id' => $id]);
+        $contact = Contact::findOrFail($id);
+
+        return view('contacts.show')->with('contact', $contact);
     }
 }

@@ -19,7 +19,7 @@ class company_seeder extends Seeder
 
         $faker = Faker::create();
 
-        foreach(range(1,10) as $index){
+        foreach (range(1, 10) as $index) {
             $company = [
                 'name' => $faker->company(),
                 'address' => $faker->address(),
@@ -33,6 +33,5 @@ class company_seeder extends Seeder
 
         DB::table('companies')->delete();
         DB::table('companies')->insert($companies);
-
     }
 }

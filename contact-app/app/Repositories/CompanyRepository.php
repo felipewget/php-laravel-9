@@ -2,13 +2,12 @@
 
 namespace App\Repositories;
 
+use App\Models\Company;
+
 class CompanyRepository
 {
     public function pluck()
     {
-        return [
-            1 => 'Company one',
-            2 => 'Company two',
-        ];
+        return Company::orderBy('name')->pluck('name', 'id');
     }
 }
